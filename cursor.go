@@ -2,14 +2,9 @@ package cursor
 
 import (
 	"fmt"
-	"image"
 	"strconv"
 	"strings"
 )
-
-func MoveTo(p image.Point) bool {
-	return moveTo(p)
-}
 
 func parse12(s string) (int, error) {
 	return strconv.Atoi(strings.TrimSpace(s[:11]))
