@@ -8,6 +8,12 @@ import (
 
 func widSelf() string {
 	out, _ := exec.Command("xdotool", "getactivewindow").Output()
+	if len(out) == 0{
+		return ""
+	}
+	if out[len(out)-1] == '\n'{
+		out=out[:len(out)-1]
+	}
 	return string(out)
 }
 
