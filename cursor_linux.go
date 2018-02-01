@@ -19,7 +19,7 @@ func widSelf() string {
 
 func MoveRelativeTo(p image.Point) {
 	id := widSelf()
-	p = p.Add(image.Pt(4,4))
+	p = p.Add(image.Pt(6,6))
 	exec.Command("xdotool", "mousemove", "-w", id, fmt.Sprint(p.X), fmt.Sprint(p.Y)).Run()
 }
 
